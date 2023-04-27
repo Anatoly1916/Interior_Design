@@ -4,7 +4,9 @@ font-family: 'Roboto', sans-serif; */
 *, *::before, *::after {
     box-sizing: border-box;
 }
-
+.d-none {
+    display: none;
+}
 body {
     margin: 0;
     padding: 0;
@@ -283,4 +285,19 @@ button {
 
 .slider-next svg {
     transform: rotate(180deg);
+}
+
+.portfolio {
+    padding-top: 118px;
+    padding-bottom: 100px;
+}
+
+.portfolio__title {
+    margin-bottom: 40px;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
