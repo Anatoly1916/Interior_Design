@@ -63,6 +63,10 @@ button {
     line-height: 51px;
 }
 
+.h2--white {
+    color: #fff;
+}
+
 .text-upper {
     text-transform: uppercase;
     font-size: 13px;
@@ -300,4 +304,67 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+.portfolio-card {
+    overflow: hidden;
+}
+
+.portfolio-card img {
+    transition: .5s;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+    filter: grayscale(1);
+}
+
+.about {
+    padding-top: 100px;
+    padding-bottom: 197px;
+    background: #574E56;
+    border: 1px solid #000000;
+    color: #fff;
+}
+
+.about__content {
+    display: flex;
+    column-gap: 115px;
+    align-items: center;
+}
+
+.about__img {
+    width: 500px;
+    height: 530px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.about__desc {
+    max-width: 456px;
+}
+
+.about__text {
+    line-height: 24px;
+    margin-bottom: 36px;
+}
+
+.about__text p + p {
+    margin-top: 24px;
+}
+
+.about__statistic-item p {
+    font-size: 100px;
+    line-height: 128px;
+    color: #F6D5A7;
+    font-family: 'Lora', serif;
+}
+
+.about__statistic {
+    display: flex;
+    column-gap: 38px;
+}
+
+.about__statistic-item {
+    width: 182px;
 }
