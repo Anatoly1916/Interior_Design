@@ -27,10 +27,10 @@ $(document).ready(function(){
     window.addEventListener('resize', () => {
         if(window.innerWidth >= 768){
             $(".portfolio-content").trigger("destroy.owl.carousel");
-            $(".portfolio-content").classList.remove('owl-carousel');
+            $(".portfolio-content").classList.remove("owl-carousel");
         }else{
             $(".portfolio-content").owlCarousel(owlConfig);
-            $(".portfolio-content").classList.add('owl-carousel');
+            $(".portfolio-content").classList.add("owl-carousel");
         }
     })
 
