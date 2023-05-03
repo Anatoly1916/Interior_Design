@@ -1,4 +1,39 @@
 $(document).ready(function(){
+
+    // настройки слайдера Portfolio
+    const owlConfig = {
+        items: 1,
+        loop: true,
+        smartSpeed: 600,
+        margin: 15,
+        stagePadding: 40,
+        responsive: {
+            480: {
+                items: 2,
+                stagePadding: 30,
+            },
+            575: {
+                items: 3, 
+                stagePadding: 0,
+            }
+        }
+    };
+    $('.portfolio-content').owlCarousel(owlConfig);
+
+    if(window.innerWidth >= 768) {
+        $(".portfolio-content").trigger("destroy.owl.carousel");
+    }
+
+    window.addEventListener('resize', () => {
+        if(window.innerWidth >= 768){
+            $(".portfolio-content").trigger("destroy.owl.carousel");
+            $(".portfolio-content").classList.remove('owl-carousel');
+        }else{
+            $(".portfolio-content").owlCarousel(owlConfig);
+            $(".portfolio-content").classList.add('owl-carousel');
+        }
+    })
+
     $(".header-slider").owlCarousel({
         items: 1,
         loop: true,
@@ -12,6 +47,7 @@ $(document).ready(function(){
     $('.slider-prev').click(function() {
         $(".header-slider").trigger('prev.owl.carousel');
     });
+
 
     // Fancybox
     Fancybox.bind("[data-fancybox]", {
@@ -34,11 +70,11 @@ $(document).ready(function(){
       });
 
     var number = document.querySelector('.number'),
-    numberTop = number.getBoundingClientRect().bottom,
+    numberBottom = number.getBoundingClientRect().bottom,
     start = +number.innerHTML, end = +number.dataset.max;
       
     window.addEventListener('scroll', function onScroll() {
-            if(window.pageYOffset > numberTop - window.innerHeight) {
+            if(window.pageYOffset > numberBottom - window.innerHeight) {
                 this.removeEventListener('scroll', onScroll);
             var interval = setInterval(function() {
                     number.innerHTML = ++start;
@@ -51,11 +87,11 @@ $(document).ready(function(){
   
   
     var number2 = document.querySelector('.number2'),
-    numberTop2 = number2.getBoundingClientRect().bottom,
+    numberBottom2 = number2.getBoundingClientRect().bottom,
     start2 = +number2.innerHTML, end2 = +number2.dataset.max;
   
     window.addEventListener('scroll', function onScroll() {
-            if(window.pageYOffset > numberTop2 - window.innerHeight) {
+            if(window.pageYOffset > numberBottom2 - window.innerHeight) {
                 this.removeEventListener('scroll', onScroll);
             var interval = setInterval(function() {
                     number2.innerHTML = ++start2;

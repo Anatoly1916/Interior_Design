@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
     <title>Interior_Design</title>
 </head>
 <body>
@@ -23,9 +24,9 @@
         <div class="header-top">
             <div class="container">
                 <div class="header-nav">
-                    <a class="text-upper" href="#!">ОБО МНЕ</a>
-                    <a class="text-upper" href="#!">ПОРТФОЛИО</a>
-                    <a class="text-upper" href="#!">КОНТАКТЫ</a>
+                    <a class="text-upper" href="#about">ОБО МНЕ</a>
+                    <a class="text-upper" href="#portfolio">ПОРТФОЛИО</a>
+                    <a class="text-upper" href="#contacts">КОНТАКТЫ</a>
                 </div>
             </div>
         </div>
@@ -36,6 +37,7 @@
                     <h2 class="text-upper">ДИЗАЙНЕР-ИНТЕРЬЕРА</h2>
                 </div>
                 <a href="https://www.youtube.com/watch?v=3MaJRdPUFQ0" data-fancybox class="start-video">
+                    <img src="./img/post.webp" width="237" height="178" alt="img">
                     <img src="./img/post.jpg" width="237" height="178" alt="img">
                     <div class="start-video__text">
                         <div class="start-video__btn">
@@ -82,12 +84,13 @@
     <main class="main">
 
         <!-- portfolio -->
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <div class="container">
                 <div class="portfolio__title">
                     <h2 class="h2">Портфолио</h2>
                 </div>
-                <div class="portfolio-content">
+                <!-- portfolio cards -->
+                <div class="owl-carousel portfolio-content">
                     <a href="./img/11.jpg" class="portfolio-card" data-fancybox="gallery">
                         <img src="./img/1.jpg" />
                     </a>
@@ -116,17 +119,19 @@
                         <img src="./img/9.jpg" />
                     </a>
                 </div>
+
             </div>
         </section>
 
         <!-- about -->
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__title">
                     <h2 class="h2 h2--white">Обо мне</h2>
                 </div>
                 <div class="about__content">
                     <div class="about__img">
+                        <img src="./img/author.webp" alt="author">
                         <img src="./img/author.jpg" alt="author">
                     </div>
                     <div class="about__desc">
@@ -155,7 +160,7 @@
         </section>
 
         <!-- contacts -->
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <div class="contacts__title">
                     <h2 class="h2">Контакты</h2>

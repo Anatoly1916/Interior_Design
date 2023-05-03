@@ -5,6 +5,8 @@ font-family: 'Roboto', sans-serif; */
     box-sizing: border-box;
 }
 
+html {scroll-behavior: smooth;}
+
 body {
     margin: 0;
     padding: 0;
@@ -328,6 +330,7 @@ textarea::placeholder {
     transform: scale(1.05);
     filter: grayscale(1);
 }
+
 
 .about {
     padding-top: 100px;
